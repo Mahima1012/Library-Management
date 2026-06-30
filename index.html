@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Hind+Siliguri:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+      body { font-family: 'Hind Siliguri', sans-serif; background: #fdf6f9; }
+      h1 { font-family: 'Playfair Display', serif; }
+      .book-card:hover .book-cover { transform: scale(1.04); }
+      .book-cover { transition: transform 0.3s ease; }
+      .search-wrap { box-shadow: 0 4px 20px rgba(236,72,153,0.15); }
+    </style>
+  </head>
+  <body class="px-8 py-6">
+
+    <!-- Search Bar -->
+    <div class="flex w-full search-wrap rounded-lg overflow-hidden mb-2">
+      <input
+        class="border-2 border-pink-500 px-4 py-3 outline-none flex-1 text-gray-700 text-sm bg-white"
+        placeholder="Search for book..."
+      />
+      <button class="bg-pink-500 hover:bg-pink-600 transition px-5 py-3 text-white font-semibold text-sm">
+        🔍 Search
+      </button>
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-5xl text-center py-8 text-pink-500 tracking-tight">Bookshelf</h1>
+
+    <!-- Book Grid: 4 columns x 4 rows = 16 books -->
+    <div class="grid grid-cols-4 gap-6">
+
+      <!-- Book 1 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/8739161-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">আজি হতে হাজার বছর আগে</p>
+        <p class="text-gray-500 text-xs text-center">আরিফ আজাদ</p>
+      </div>
+
+      <!-- Book 2 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/10494135-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">ইমানের অপরিহার্য পাঠ</p>
+        <p class="text-gray-500 text-xs text-center">শায়খ আহমাদুল্লাহ</p>
+      </div>
+
+      <!-- Book 3 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/8231432-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">নীলকঠী</p>
+        <p class="text-gray-500 text-xs text-center">সাদাত হোসাইন</p>
+      </div>
+
+      <!-- Book 4 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/7222246-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">দ্য সিক্রেট অফ সিক্রেটস</p>
+        <p class="text-gray-500 text-xs text-center">ড্যান ব্রাউন</p>
+      </div>
+
+      <!-- Book 5 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/10523678-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">জোবায়ের'স জিকে (সাধারণ জ্ঞান)</p>
+        <p class="text-gray-500 text-xs text-center">জোবায়ের আহমেদ</p>
+      </div>
+
+      <!-- Book 6 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/8739165-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">পাগলাপ্রেনার</p>
+        <p class="text-gray-500 text-xs text-center">মুহাম্মদ ইলিয়াস কাঞ্চন</p>
+      </div>
+
+      <!-- Book 7 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/9255566-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">আলকেমিস্ট</p>
+        <p class="text-gray-500 text-xs text-center">পাওলো কোয়েলো</p>
+      </div>
+
+      <!-- Book 8 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/8408476-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">হাজার বছর ধরে</p>
+        <p class="text-gray-500 text-xs text-center">জহির রায়হান</p>
+      </div>
+
+      <!-- Book 9 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/8571124-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">মুক্তিযুদ্ধের ইতিহাস</p>
+        <p class="text-gray-500 text-xs text-center">মুনতাসীর মামুন</p>
+      </div>
+
+      <!-- Book 10 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/6979861-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">দেওয়াল</p>
+        <p class="text-gray-500 text-xs text-center">হুমায়ূন আহমেদ</p>
+      </div>
+
+      <!-- Book 11 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/8739168-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">রাত্রির যাত্রী</p>
+        <p class="text-gray-500 text-xs text-center">সমরেশ মজুমদার</p>
+      </div>
+
+      <!-- Book 12 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/8225261-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">ক্ষুধা</p>
+        <p class="text-gray-500 text-xs text-center">নুট হামসুন</p>
+      </div>
+
+      <!-- Book 13 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/10889680-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">গল্পগুচ্ছ</p>
+        <p class="text-gray-500 text-xs text-center">রবীন্দ্রনাথ ঠাকুর</p>
+      </div>
+
+      <!-- Book 14 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/8222490-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">লালসালু</p>
+        <p class="text-gray-500 text-xs text-center">সৈয়দ ওয়ালীউল্লাহ</p>
+      </div>
+
+      <!-- Book 15 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/8739160-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">পথের দাবী</p>
+        <p class="text-gray-500 text-xs text-center">শরৎচন্দ্র চট্টোপাধ্যায়</p>
+      </div>
+
+      <!-- Book 16 -->
+      <div class="book-card bg-white rounded-xl shadow-md p-4 flex flex-col items-center relative cursor-pointer hover:shadow-xl transition">
+        <div class="overflow-hidden rounded-md mb-3 w-full">
+          <img src="https://covers.openlibrary.org/b/id/8406786-M.jpg" alt="Book" class="book-cover w-full h-44 object-cover rounded-md"/>
+        </div>
+        <p class="text-gray-800 font-semibold text-sm text-center mt-1">চাঁদের অমাবস্যা</p>
+        <p class="text-gray-500 text-xs text-center">সৈয়দ ওয়ালীউল্লাহ</p>
+      </div>
+
+    </div>
+
+    <!-- Footer note -->
+    <p class="text-center text-pink-400 text-xs mt-10 mb-4 tracking-widest uppercase">© Bookshelf — সেরা বইয়ের সংগ্রহ</p>
+
+  </body>
+</html>
